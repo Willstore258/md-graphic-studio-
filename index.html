@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD DESIGN - Jasa Desain Grafis Murah Rp15.000</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                        },
+                        brand: '#ff4757',
+                        accent: '#2ed573'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Font Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Glassmorphism Effect */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .dark .glass-card {
+            background: rgba(17, 24, 39, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Glowing Effects */
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(255, 71, 87, 0.3);
+        }
+
+        .glow-wa {
+            box-shadow: 0 0 20px rgba(46, 213, 115, 0.4);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 min-h-screen flex flex-col justify-between selection:bg-brand selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50 glass-card transition-all duration-300 border-b border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-rose-500 via-red-500 to-amber-500 flex items-center justify-center text-white font-black text-xl shadow-lg transform group-hover:scale-105 transition-all">
+                    MD
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider uppercase bg-gradient-to-r from-red-500 via-rose-500 to-amber-500 bg-clip-text text-transparent">MD DESIGN</span>
+                    <span class="block text-[10px] font-semibold text-gray-500 dark:text-gray-400 tracking-widest uppercase">Creative Studio</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#promo" class="hover:text-red-500 transition-colors">Promo Spesial</a>
+                <a href="#layanan" class="hover:text-red-500 transition-colors">Layanan</a>
+                <a href="#kalkulator" class="hover:text-red-500 transition-colors">Hitung Harga</a>
+                <a href="#kontak" class="hover:text-red-500 transition-colors">Kontak WA</a>
+            </nav>
+
+            <!-- Actions Right -->
+            <div class="flex items-center gap-3">
+                <!-- Theme Switcher Toggle Button -->
+                <button id="themeToggle" onclick="toggleTheme()" class="p-2.5 rounded-xl bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-amber-400 hover:opacity-80 transition-all flex items-center gap-2 text-sm font-semibold" title="Ganti Tema">
+                    <i id="themeIcon" class="fa-solid fa-moon"></i>
+                    <span id="themeText" class="hidden sm:inline">Gelap</span>
+                </button>
+
+                <!-- Direct WA Quick CTA -->
+                <a href="https://wa.me/62882010478835?text=Halo%20MD%20DESIGN%2C%20saya%20ingin%20tanya%20jasa%20desain%20dengan%20kode%20MY%20Z%20ONE%2014" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-all shadow-md hover:shadow-emerald-500/20">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- HERO & MAIN PROMO SECTION -->
+        <section id="promo" class="relative pt-8 pb-16 md:py-20 overflow-hidden">
+            <!-- Background Gradient Blurs -->
+            <div class="absolute top-10 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-tr from-red-500/20 via-amber-500/10 to-indigo-500/20 blur-3xl pointer-events-none rounded-full"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left Banner Text & Actions -->
+                    <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                        
+                        <!-- Badge Kode Promo -->
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-red-100 dark:bg-red-950/60 border border-red-200 dark:border-red-800/60 text-red-600 dark:text-red-400 text-xs sm:text-sm font-bold tracking-wide uppercase shadow-sm">
+                            <span class="animate-pulse flex h-2 w-2 rounded-full bg-red-500"></span>
+                            PROMO SPESIAL KODE: <span class="bg-red-500 text-white px-2 py-0.5 rounded font-mono">MY Z ONE 14</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                            Jasa Desain Grafis Professional <br class="hidden sm:inline">
+                            <span class="bg-gradient-to-r from-red-500 via-rose-500 to-amber-500 bg-clip-text text-transparent">Mulai Harga Rp15.000</span>
+                        </h1>
+
+                        <!-- Promo Highlight Text -->
+                        <div class="p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-800 dark:text-amber-300 font-semibold text-lg sm:text-xl flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fa-solid fa-tags text-amber-500 text-2xl"></i>
+                            <span>Promo Jasa desain mulai harga <strong class="text-red-600 dark:text-red-400 font-black underline text-2xl">Rp15.000</strong>. Yang pastinya murah!</span>
+                        </div>
+
+                        <p class="text-gray-600 dark:text-gray-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0">
+                            Solusi tepat untuk kebutuhan desain logo, banner promo, postingan sosial media, brosur, dan materi promosi usahamu dengan kualitas tinggi dan proses pengerjaan cepat.
+                        </p>
+
+                        <!-- Copy Code Bar -->
+                        <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 p-3 sm:p-4 rounded-2xl shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3 max-w-xl mx-auto lg:mx-0">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-950/50 text-red-500 flex items-center justify-center font-bold">
+                                    <i class="fa-solid fa-ticket text-lg"></i>
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-xs text-gray-500 dark:text-gray-400">Gunakan Kode Voucher:</p>
+                                    <p id="promoCodeText" class="font-mono font-black text-lg text-gray-900 dark:text-white tracking-widest">MY Z ONE 14</p>
+                                </div>
+                            </div>
+                            <button onclick="copyPromoCode()" class="w-full sm:w-auto bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 font-semibold px-4 py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 text-sm">
+                                <i id="copyIcon" class="fa-regular fa-copy"></i>
+                                <span id="copyBtnText">Salin Kode</span>
+                            </button>
+                        </div>
+
+                        <!-- WhatsApp Action Buttons -->
+                        <div class="pt-2 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <!-- WA 1 Button -->
+                            <a href="https://wa.me/62882010478835?text=Halo%20MD%20DESIGN%2C%20saya%20ingin%20pesan%20jasa%20desain%20dengan%20ketik%20kode%20%3A%20MY%20Z%20ONE%2014" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base px-6 py-4 rounded-2xl shadow-lg shadow-emerald-600/30 hover:shadow-emerald-600/50 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <div class="text-left">
+                                    <span class="block text-xs uppercase opacity-80">Hubungi Nomor WA 1</span>
+                                    <span class="text-base font-extrabold">62882010478835</span>
+                                </div>
+                            </a>
+
+                            <!-- WA 2 Button -->
+                            <a href="https://wa.me/6289681862938?text=Halo%20MD%20DESIGN%2C%20saya%20ingin%20pesan%20jasa%20desain%20dengan%20ketik%20kode%20%3A%20MY%20Z%20ONE%2014" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="bg-teal-600 hover:bg-teal-500 text-white font-bold text-base px-6 py-4 rounded-2xl shadow-lg shadow-teal-600/30 hover:shadow-teal-600/50 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3">
+                                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                                <div class="text-left">
+                                    <span class="block text-xs uppercase opacity-80">Hubungi Nomor WA 2</span>
+                                    <span class="text-base font-extrabold">+62896-8186-2938</span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Main Poster Image Showcase -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="relative w-full max-w-md group">
+                            
+                            <!-- Image Frame Border & Glow -->
+                            <div class="absolute -inset-1.5 bg-gradient-to-r from-red-500 via-amber-500 to-rose-500 rounded-3xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                            
+                            <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-gray-900 border border-gray-800">
+                                <!-- Main Promo Image Requested by User -->
+                                <img src="https://r1.ryzumi.net/ryzumi-api/ryzumi-temp/6fd255de37ece722b6b8aa70.jpg" 
+                                     alt="MD DESIGN Promo Jasa Desain Murah Rp15.000" 
+                                     class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x800/111827/ffffff?text=MD+DESIGN+Promo+Rp15.000';">
+                                
+                                <!-- Floating Badge on Image -->
+                                <div class="absolute top-4 right-4 bg-red-600 text-white px-3 py-1.5 rounded-xl font-black text-xs uppercase shadow-lg tracking-wider border border-white/20">
+                                    Promo Terbatas!
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caption Below Image (Required by User Prompt) -->
+                        <div class="mt-4 text-center">
+                            <p class="text-lg font-bold text-gray-900 dark:text-gray-100">
+                                Promo Jasa desain mulai harga Rp15.000.
+                            </p>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                Ketik kode <span class="font-mono font-bold text-red-500">MY Z ONE 14</span> saat melakukan pemesanan via WA.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="layanan" class="py-16 bg-gray-100/70 dark:bg-gray-900/50 border-y border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="text-xs font-bold text-red-500 uppercase tracking-widest mb-2">Layanan Desain Grafis</h2>
+                    <p class="text-3xl font-extrabold text-gray-900 dark:text-white">Pilih Desain Sesuai Kebutuhanmu</p>
+                    <p class="text-gray-600 dark:text-gray-400 mt-2">Semua jenis desain dikerjakan secara profesional, rapi, dan cepat dengan harga terjangkau mulai Rp15.000.</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Card 1 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Desain Poster & Flyer</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Poster promosi acara, flyer produk, pamflet digital & cetak dengan visual yang memikat.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-xs text-gray-400">Harga Mulai</span>
+                            <span class="text-lg font-black text-red-500">Rp15.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-hashtag"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Feed Social Media</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Konten Instagram Feed, Story, Banner Shopee, Tokopedia, dan Mikrosite promosi.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-xs text-gray-400">Harga Mulai</span>
+                            <span class="text-lg font-black text-red-500">Rp15.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Desain Logo Usaha</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Identitas brand & logo unik untuk OLShop, UMKM, Komunitas, atau bisnis pribadi.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-xs text-gray-400">Harga Promo</span>
+                            <span class="text-lg font-black text-red-500">Rp25.000</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white dark:bg-gray-900 p-6 rounded-2xl border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-id-card"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Brosur, Menu & Banner</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-4">Spanduk toko, daftar menu makanan/minuman, kartu nama, dan sertifikat.</p>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-xs text-gray-400">Harga Mulai</span>
+                            <span class="text-lg font-black text-red-500">Rp20.000</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PRICE CALCULATOR & ORDER GENERATOR -->
+        <section id="kalkulator" class="py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-3xl p-6 sm:p-10 shadow-xl">
+                    <div class="text-center mb-8">
+                        <span class="px-3 py-1 bg-red-100 dark:bg-red-950 text-red-600 dark:text-red-400 rounded-full text-xs font-bold uppercase tracking-wider">Fitur Praktis</span>
+                        <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mt-2">Kalkulator Estimasi & Format Pesanan</h2>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Pilih jenis desain dan langsung salin format pesanan ke WhatsApp</p>
+                    </div>
+
+                    <form id="calcForm" onsubmit="handleCalcSubmit(event)" class="space-y-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            
+                            <!-- Select Service -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Jenis Desain</label>
+                                <select id="serviceSelect" onchange="calculatePrice()" class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none">
+                                    <option value="15000" data-name="Desain Poster / Flyer Promo">Desain Poster / Flyer Promo (Rp15.000)</option>
+                                    <option value="15000" data-name="Desain Feed / Story Instagram">Desain Feed / Story Instagram (Rp15.000)</option>
+                                    <option value="20000" data-name="Desain Spanduk / Banner">Desain Spanduk / Banner (Rp20.000)</option>
+                                    <option value="25000" data-name="Desain Logo Usaha / OLShop">Desain Logo Usaha / OLShop (Rp25.000)</option>
+                                    <option value="15000" data-name="Desain Kartu Nama / Menu / Lainnya">Desain Kartu Nama / Menu (Rp15.000)</option>
+                                </select>
+                            </div>
+
+                            <!-- Quantity -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Jumlah Desain</label>
+                                <input type="number" id="qtyInput" value="1" min="1" max="50" oninput="calculatePrice()" class="w-full bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl px-4 py-3 text-gray-900 dark:text-white focus:ring-2 focus:ring-red-500 outline-none">
+                            </div>
+
+                            <!-- Promo Code Input -->
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Kode Voucher / Promo</label>
+                                <input type="text" id="voucherInput" value="MY Z ONE 14" readonly class="w-full bg-gray-100 dark:bg-gray-800/60 border border-red-300 dark:border-red-800/80 rounded-xl px-4 py-3 text-red-600 dark:text-red-400 font-mono font-bold tracking-widest outline-none">
+                                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">*Kode promo otomatis diterapkan untuk harga termurah.</p>
+                            </div>
+
+                        </div>
+
+                        <!-- Price Total Card -->
+                        <div class="bg-gray-50 dark:bg-gray-800/50 p-4 rounded-2xl border border-gray-200 dark:border-gray-700/60 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-gray-500 dark:text-gray-400 block">Total Estimasi Harga:</span>
+                                <span id="totalPriceDisplay" class="text-2xl sm:text-3xl font-black text-red-600 dark:text-red-400">Rp15.000</span>
+                            </div>
+                            <span class="text-xs font-semibold px-3 py-1 bg-emerald-100 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 rounded-lg">Harga Promo Aktif</span>
+                        </div>
+
+                        <!-- Select Target WhatsApp Number -->
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Kirim Pesanan Ke Nomor WA:</label>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-emerald-500 transition-all">
+                                    <input type="radio" name="targetWa" value="62882010478835" checked class="text-emerald-600 focus:ring-emerald-500">
+                                    <div>
+                                        <p class="font-bold text-sm">Nomor Admin 1</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">62882010478835</p>
+                                    </div>
+                                </label>
+                                <label class="flex items-center gap-3 p-3 rounded-xl border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-emerald-500 transition-all">
+                                    <input type="radio" name="targetWa" value="6289681862938" class="text-emerald-600 focus:ring-emerald-500">
+                                    <div>
+                                        <p class="font-bold text-sm">Nomor Admin 2</p>
+                                        <p class="text-xs text-gray-500 dark:text-gray-400">+62896-8186-2938</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Order Button -->
+                        <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3 text-base">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Order Sekarang via WhatsApp</span>
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT & WHY CHOOSE US -->
+        <section id="kontak" class="py-16 bg-gray-100/70 dark:bg-gray-900/50 border-t border-gray-200 dark:border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    
+                    <!-- Left: Why Choose Us -->
+                    <div class="space-y-6">
+                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Keunggulan MD DESIGN</span>
+                        <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Mengapa Harus Pesan Desain di MD DESIGN?</h2>
+
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold flex-shrink-0">
+                                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white">Harga Pastinya Murah</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Promo menarik mulai harga Rp15.000 cocok untuk kantong pelajar, mahasiswa, maupun UMKM.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-500 flex items-center justify-center font-bold flex-shrink-0">
+                                    <i class="fa-solid fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white">Proses Pengerjaan Cepat</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Hasil desain dapat selesai dengan cepat tanpa mengurangi kualitas pengerjaan.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center font-bold flex-shrink-0">
+                                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white">Hasil Kreatif & Profesional</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Didesain dengan perhatian pada estetika, kombinasi warna, dan komunikasi visual yang tepat.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold flex-shrink-0">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-900 dark:text-white">Garansi Revisi</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Bisa melakukan revisi sesuai kesepakatan hingga hasilnya pas di hati Anda.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Contact Card -->
+                    <div class="bg-white dark:bg-gray-900 p-8 rounded-3xl border border-gray-200 dark:border-gray-800 shadow-xl text-center lg:text-left space-y-6">
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Hubungi Kami Sekarang</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm">
+                            Silahkan hubungi kami melalui nomor WhatsApp resmi di bawah ini dengan menyertakan kode promo <strong class="text-red-500">MY Z ONE 14</strong> untuk mendapatkan penawaran spesial.
+                        </p>
+
+                        <!-- Number List -->
+                        <div class="space-y-4">
+                            <!-- Number 1 -->
+                            <a href="https://wa.me/62882010478835?text=Halo%20MD%20DESIGN%2C%20saya%20ingin%20tanya%20jasa%20desain%20dengan%20kode%20MY%20Z%20ONE%2014" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-gray-50 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all border border-gray-200 dark:border-gray-700/60">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-emerald-500 text-white flex items-center justify-center text-lg font-bold">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="text-xs text-gray-400">WhatsApp Admin 1</p>
+                                        <p class="font-mono font-bold text-gray-900 dark:text-white text-base">62882010478835</p>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                            </a>
+
+                            <!-- Number 2 -->
+                            <a href="https://wa.me/6289681862938?text=Halo%20MD%20DESIGN%2C%20saya%20ingin%20tanya%20jasa%20desain%20dengan%20kode%20MY%20Z%20ONE%2014" target="_blank" class="flex items-center justify-between p-4 rounded-2xl bg-gray-50 dark:bg-gray-800/80 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all border border-gray-200 dark:border-gray-700/60">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-teal-500 text-white flex items-center justify-center text-lg font-bold">
+                                        <i class="fa-brands fa-whatsapp"></i>
+                                    </div>
+                                    <div class="text-left">
+                                        <p class="text-xs text-gray-400">WhatsApp Admin 2</p>
+                                        <p class="font-mono font-bold text-gray-900 dark:text-white text-base">+62896-8186-2938</p>
+                                    </div>
+                                </div>
+                                <i class="fa-solid fa-chevron-right text-gray-400"></i>
+                            </a>
+                        </div>
+
+                        <!-- Code Reminder Box -->
+                        <div class="p-4 rounded-2xl bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-900/40 text-center">
+                            <span class="text-xs text-red-600 dark:text-red-400 font-semibold block">Jangan lupa mengetik kode promo:</span>
+                            <span class="text-xl font-mono font-black text-red-600 dark:text-red-400 tracking-wider">MY Z ONE 14</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-rose-500 to-amber-500 flex items-center justify-center text-white font-black text-sm">
+                    MD
+                </div>
+                <span class="font-extrabold text-gray-900 dark:text-white tracking-wider">MD DESIGN</span>
+            </div>
+
+            <p class="text-xs text-gray-500 dark:text-gray-400">
+                Promo Jasa Desain Grafis Terjangkau & Professional Rp15.000.
+            </p>
+
+            <!-- Copyright string required by user prompt -->
+            <div class="pt-4 border-t border-gray-100 dark:border-gray-900">
+                <p class="text-xs font-medium text-gray-500 dark:text-gray-400">
+                    © MD Design 2026 - Allah Right Reserved
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Toast Notification for Copying Code -->
+    <div id="toast" class="fixed bottom-6 right-6 transform translate-y-24 opacity-0 transition-all duration-300 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 z-50 pointer-events-none">
+        <i class="fa-solid fa-circle-check text-emerald-400 dark:text-emerald-600 text-lg"></i>
+        <span id="toastMsg" class="text-sm font-semibold">Kode promo berhasil disalin!</span>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Theme State & Toggle Logic
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                themeIcon.className = 'fa-solid fa-sun';
+                themeText.textContent = 'Terang';
+                localStorage.setItem('md_theme', 'light');
+            } else {
+                html.classList.add('dark');
+                themeIcon.className = 'fa-solid fa-moon';
+                themeText.textContent = 'Gelap';
+                localStorage.setItem('md_theme', 'dark');
+            }
+        }
+
+        // Initialize Theme Based on Preference
+        (function initTheme() {
+            const savedTheme = localStorage.getItem('md_theme');
+            const html = document.documentElement;
+            const themeIcon = document.getElementById('themeIcon');
+            const themeText = document.getElementById('themeText');
+
+            if (savedTheme === 'light') {
+                html.classList.remove('dark');
+                if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
+                if (themeText) themeText.textContent = 'Terang';
+            } else {
+                html.classList.add('dark');
+                if (themeIcon) themeIcon.className = 'fa-solid fa-moon';
+                if (themeText) themeText.textContent = 'Gelap';
+            }
+        })();
+
+        // Copy Promo Code to Clipboard Function
+        function copyPromoCode() {
+            const code = "MY Z ONE 14";
+            
+            // Clipboard Fallback Strategy
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(code);
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = code;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-999999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                document.execCommand('copy');
+                textArea.remove();
+            }
+
+            // Visual feedback
+            const btnText = document.getElementById('copyBtnText');
+            const copyIcon = document.getElementById('copyIcon');
+            
+            if (btnText && copyIcon) {
+                btnText.textContent = "Tersalin!";
+                copyIcon.className = "fa-solid fa-check text-emerald-500";
+                
+                setTimeout(() => {
+                    btnText.textContent = "Salin Kode";
+                    copyIcon.className = "fa-regular fa-copy";
+                }, 2000);
+            }
+
+            showToast("Kode PROMO 'MY Z ONE 14' berhasil disalin!");
+        }
+
+        // Show Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            
+            if (toast && toastMsg) {
+                toastMsg.textContent = message;
+                toast.classList.remove('translate-y-24', 'opacity-0');
+                toast.classList.add('translate-y-0', 'opacity-100');
+
+                setTimeout(() => {
+                    toast.classList.remove('translate-y-0', 'opacity-100');
+                    toast.classList.add('translate-y-24', 'opacity-0');
+                }, 3000);
+            }
+        }
+
+        // Calculate Price Function
+        function calculatePrice() {
+            const select = document.getElementById('serviceSelect');
+            const qtyInput = document.getElementById('qtyInput');
+            const display = document.getElementById('totalPriceDisplay');
+
+            if (!select || !qtyInput || !display) return;
+
+            const unitPrice = parseInt(select.value, 10) || 15000;
+            let qty = parseInt(qtyInput.value, 10) || 1;
+            if (qty < 1) qty = 1;
+
+            const total = unitPrice * qty;
+            display.textContent = 'Rp' + total.toLocaleString('id-ID');
+        }
+
+        // Handle Calculator Form Submit -> Direct WA
+        function handleCalcSubmit(event) {
+            event.preventDefault();
+            
+            const select = document.getElementById('serviceSelect');
+            const selectedOption = select.options[select.selectedIndex];
+            const serviceName = selectedOption.getAttribute('data-name') || 'Jasa Desain';
+            const qty = document.getElementById('qtyInput').value || 1;
+            const priceText = document.getElementById('totalPriceDisplay').textContent;
+            
+            const targetWaElements = document.getElementsByName('targetWa');
+            let targetWa = "62882010478835";
+            for (let radio of targetWaElements) {
+                if (radio.checked) {
+                    targetWa = radio.value;
+                    break;
+                }
+            }
+
+            const promoCode = "MY Z ONE 14";
+
+            // Format message template
+            const message = `Halo MD DESIGN, saya ingin memesan jasa desain:
+
+*Layanan:* ${serviceName}
+*Jumlah:* ${qty}
+*Total Estimasi:* ${priceText}
+*Kode Promo:* ${promoCode}
+
+Mohon diproses, terima kasih!`;
+
+            const encodedMsg = encodeURIComponent(message);
+            const waUrl = `https://wa.me/${targetWa}?text=${encodedMsg}`;
+
+            // Open WhatsApp in new tab
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
